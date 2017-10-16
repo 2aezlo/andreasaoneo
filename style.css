@@ -1,90 +1,259 @@
-* {
-     font-family: 'Montserrat', 'Open Sans', sans-serif;
-     font-size: 20px;
+*  {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', 'Open Sans', sans-serif;
+      box-sizing: border-box;
 }
-h1 {
-     font-weight: 400;
+*::selection {
+    background-color: rgba(129, 102, 171, 0.6);
 }
-h2 {
-     font-weight: 300;
-}
-h2 a {
-     font-weight: 300;
-     font-size: 100%;
-     color: #e4f3ff;
-}
-p {
-     font-weight: 200;
-}
-a {
-     text-decoration: none;
-     color: #acdfff;
-}
-h5 {
-     color: 3d71cf;
-     font-weight: 300;
-}
-footer h5 a i{
-     color: 3d71df;
-}
-footer {
-     text-align: center;
-     margin-left: auto;
-     margin-right: auto;
+/* ================================================================================== */
+/* =================================== MEDIA QUERIES ================================ */
+/* ================================================================================== */
 
+
+
+     /* FOR PHONES */
+@media only screen  and ( max-width: 800px )   {
+     * 	{
+          font-size: 3px;
+     }
+    .title {
+        font-size: 900%;
+    }
+    .navigation li {
+        font-size: 200%;
+    }
+}
+@media only screen and ( max-height: 1000px) {
+    * 	{
+          font-size: 3px;
+    }
 }
 
-.inline {
-     display: inline-block;
+     /* FOR TABLETS */
+@media only screen  and ( min-width: 800px, orientation: portrait )   {
+     * 	{
+          font-size: 7px;
+     }
 }
-.banner {
-     width: 50vw;
-     margin: 5vh 25vw 5vh 25vw;
+     /* FOR TABLETS */
+@media only screen  and ( min-width: 930px, orientation: landscape )   {
+     * 	{
+          font-size: 15px;
+     }
 }
-.block {
-     width: 80vw;
-     background-color: #3d71cf;
-     padding: 2vh 2vw 2vh 2vw;
-     text-align: center;
-     height: 20vh;
+
+     /* FOR DESKTOPS */
+@media only screen  and ( min-width: 1200px )   {
+     * 	{
+          font-size: 20px;
+     }
+}
+
+
+     /* LARGER */
+@media only screen  and ( min-width: 2500px )   {
+     * 	{
+          font-size: 30px;
+     }
+}
+
+
+     
+/* ================================================================================== */
+/* ================================================================================== */
+/* ================================================================================== */
+
+
+
+
+
+/* ================================================================================== */
+/* ===== REUSABLE ELEMENTS ===== */
+/* ================================================================================== */
+
+
+
+/* ================ */
+/*
+background: linear-gradient(#00BCDD, #586EFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+
+linearGradient(rgba(94, 107, 255, 0.7), rgba(21, 6, 135, 0.7));
+*/
+/* ================ */
+
+.row {
      margin-left: auto;
      margin-right: auto;
-     margin-bottom: 10vh;
-     transition-duration: 0.4s;
-     transition-timing-function: ease;
+     width: 80%;
 }
-.block:hover {
-     width: 80vw;
-     background-color: #3d71dd;
-     padding: 2vh 2vw 2vh 2vw;
-     text-align: center;
-     height: 20vh;
-     margin-left: auto;
-     margin-right: auto;
-     margin-bottom: 10vh;
-     transition-duration: 0.5s;
-     transition-timing-function: ease;
+
+.page {
+     height: 100vh;
+     background-size: cover;
+     background-position: center;
 }
-.block h1{
-     color: white;
-     padding: 2vh;
-     margin: 2vh;
-     font-size: 200%;
+
+@-webkit-keyframes fadeUp {
+    from {
+        position: absolute;
+        top: 70vh;
+        opacity: 0;
+    }
+    
+    to {
+        position: absolute;
+        top: 50vh;
+        opacity: 1;
+    }
 }
-.block h2{
-     color: whitesmoke;
-     padding: 2vh;
-     margin: 2vh;
-     font-size: 150%;
+@keyframes fadeUp {
+    from {
+        position: absolute;
+        top: 70vh;
+        opacity: 0;
+    }
+    
+    to {
+        position: absolute;
+        top: 53vh;
+        opacity: 1;
+    }
 }
-.block p{
-     color: snow;
-     padding: 0px;
-     margin: 1vh;
-     font-size: 100%;
+@-webkit-keyframes colorFadeIn{
+    from {
+        color: white;
+        background: linear-gradient(#ffffff, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    to {
+        color: #586EFF;
+        background: linear-gradient(#00BCDD, #586EFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 }
-.footerLogo {
-     height: 17px;
-     display: inline-block;
+@keyframes colorFadeIn{
+    from {
+        color: white;
+        background: linear-gradient(#ffffff, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    to {
+        color: #586EFF;
+        background: linear-gradient(#00BCDD, #586EFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+/* ================================================================================== */
+/* ================================================================================== */
+/* ================================================================================== */
+
+
+
+
+
+
+
+/* ================================================================================== */
+/* FOR THE HEADER */
+/* ================================================================================== */
+
+/* Setting the background image */
+header {
+    background-image: url(Images/headerBackground.svg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+
+/*The logo in the navigation */
+.logo {
+     height: 10vh;
      width: auto;
+     float: left;
+}
+
+
+/* Setting up the navigation */
+.navigation {
+     float: right;
+     list-style: none;
+}
+
+
+/* All the links in the nav */
+.navigation li {
+     display: inline-block;
+     margin-left: 3vw;
+     margin-top: 5vh;
+     transform: translate(-0px, -50%);
+}
+/* All the states */
+.navigation li a:link,
+.navigation li a:visited {
+     font-size: 222%;
+     background: linear-gradient(#e5e5ff, #eef);
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     transition-duration: 0.5s;
+     text-decoration: none;
+}
+
+.navigation li a:hover {
+     background: linear-gradient(#66e8ff, #c0c8fc);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+}
+
+.navigation li a:active {
+     font-size: 222%;
+     background: linear-gradient(#00BCDD, #586EFF);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     text-decoration: none;
+     transition-duration: 0.5s;
+}
+
+
+/* The nav's background */
+.headerBackground {
+     width: 100%;
+     height: 10vh;
+     background-color: #476ecc;
+}
+
+
+/* The title */
+.title {
+    font-size: 800%;
+    text-align: center;
+    position: absolute;
+    background: linear-gradient(#00BCDD, #586EFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    animation: fadeUp 3s ease-out;
+    /*animation: colorFadeIn 3s ease-out 3s;*/
 }
