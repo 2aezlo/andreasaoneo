@@ -28,6 +28,21 @@
         <title> 404 </title>
         
         <style>
+		@keyframes subtitleFadeUp {
+			from {
+				position: absolute;
+				top: 70vh;
+				opacity: 0;
+				transform: translate(-50%, -50%);
+			    }
+    
+			    to {
+				position: absolute;
+				top: 53vh;
+				opacity: 1;
+				transform: translate(-50%, -50%);
+			    }
+		}
             .sub {
                 font-size: 200%;
                 text-align: center;
@@ -40,7 +55,7 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 65%;
-                animation: fadeUp 3s ease-out;
+                animation: subtitleFadeUp 3s ease-out;
             }
         </style>
     
@@ -65,7 +80,7 @@
          </nav>
          <div class="header js-hide-hero">
              <h1 class="title js-hide-h1"> 404 </h1>    
-             <p class="sub"> The webpage you were looking for doesn't seem to exist! </p>
+             <p class="sub"> The webpage you were looking <br>for doesn't seem to exist! </p>
          </div>
       </header>
         
