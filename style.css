@@ -24,6 +24,17 @@
     .navigation li {
         font-size: 200%;
     }
+    .card {
+        width: calc(100vw - 12vw);
+        height: calc(((100vw / 3) - 12vw) + 170px);
+        border-radius: 0.5%;
+        animation: radiusIn 0.5s ease 0.1s;
+        margin: 4vw;
+        display: inline-block;
+        box-shadow: 0 1px 5px rgba(40, 44, 40, 0.85);
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
 }
 @media only screen and ( max-height: 1000px) {
     * 	{
@@ -36,6 +47,17 @@
      * 	{
           font-size: 7px;
      }
+    .card {
+        width: calc(100vw - 12vw);
+        height: calc((100vw - 12vw) + 200px);
+        border-radius: 0.5%;
+        animation: radiusIn 0.5s ease 0.1s;
+        margin: 4vw;
+        display: inline-block;
+        box-shadow: 0 1px 5px rgba(40, 44, 40, 0.85);
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+    }
 }
      /* FOR TABLETS */
 @media only screen  and ( min-width: 930px, orientation: landscape )   {
@@ -98,7 +120,13 @@ linearGradient(rgba(94, 107, 255, 0.7), rgba(21, 6, 135, 0.7));
      background-size: cover;
      background-position: center;
 }
-
+.btn {
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+.btn:hover {
+    transform: scale(1.05, 1.05);
+}
 @-webkit-keyframes fadeUp {
     from {
         position: absolute;
@@ -311,4 +339,9 @@ header {
 .card .cardtext {
     font-size: 80%;
     margin: calc((0.5vw + 0.5vh) / 2);
+}
+.card .payBtn {
+    width: calc(((100vw / 3) - 12vw) / 2.5);
+    height: auto;
+    margin: calc((2vw + 2vh) / 2) auto;
 }
