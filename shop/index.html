@@ -1,23 +1,23 @@
 <html>
 	<head>
-   		<link rel="stylesheet" href="style.css" type="text/css">
+   		<link rel="stylesheet" href="/style.css" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-     		<link rel="apple-touch-icon" sizes="57x57" href="Favicons/apple-icon-57x57.png">
-     		<link rel="apple-touch-icon" sizes="60x60" href="Favicons/apple-icon-60x60.png">
-     		<link rel="apple-touch-icon" sizes="72x72" href="Favicons/apple-icon-72x72.png">
-     		<link rel="apple-touch-icon" sizes="76x76" href="Favicons/apple-icon-76x76.png">
-     		<link rel="apple-touch-icon" sizes="114x114" href="Favicons/apple-icon-114x114.png">
-     		<link rel="apple-touch-icon" sizes="120x120" href="Favicons/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="Favicons/apple-icon-144x144.png">
-     		<link rel="apple-touch-icon" sizes="152x152" href="Favicons/apple-icon-152x152.png">
-     		<link rel="apple-touch-icon" sizes="180x180" href="Favicons/apple-icon-180x180.png">
-     		<link rel="icon" type="image/png" sizes="192x192" href="Favicons/android-icon-192x192.png">
-     		<link rel="icon" type="image/png" sizes="32x32" href="Favicons/favicon-32x32.png">
-     		<link rel="icon" type="image/png" sizes="96x96" href="Favicons/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="Favicons/favicon-16x16.png">
-     		<link rel="manifest" href="Favicons/manifest.json">
+     		<link rel="apple-touch-icon" sizes="57x57" href="/Favicons/apple-icon-57x57.png">
+     		<link rel="apple-touch-icon" sizes="60x60" href="/Favicons/apple-icon-60x60.png">
+     		<link rel="apple-touch-icon" sizes="72x72" href="/Favicons/apple-icon-72x72.png">
+     		<link rel="apple-touch-icon" sizes="76x76" href="/Favicons/apple-icon-76x76.png">
+     		<link rel="apple-touch-icon" sizes="114x114" href="/Favicons/apple-icon-114x114.png">
+     		<link rel="apple-touch-icon" sizes="120x120" href="/Favicons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/Favicons/apple-icon-144x144.png">
+     		<link rel="apple-touch-icon" sizes="152x152" href="/Favicons/apple-icon-152x152.png">
+     		<link rel="apple-touch-icon" sizes="180x180" href="/Favicons/apple-icon-180x180.png">
+     		<link rel="icon" type="image/png" sizes="192x192" href="/Favicons/android-icon-192x192.png">
+     		<link rel="icon" type="image/png" sizes="32x32" href="/Favicons/favicon-32x32.png">
+     		<link rel="icon" type="image/png" sizes="96x96" href="/Favicons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/Favicons/favicon-16x16.png">
+     		<link rel="manifest" href="/Favicons/manifest.json">
      		<meta name="msapplication-TileColor" content="#ffffff">
      		<meta name="msapplication-TileImage" content="Favicons/ms-icon-144x144.png">
      		<meta name="theme-color" content="#ffffff">
@@ -30,14 +30,41 @@
 	<!-- HTML Goes here: -->
 	<body>
 		
-	   	
+	   	<nav class="js-hide-nav">
+            <div class="headerBackground">
+               <div class="row">
+                  <img src="/Images/emptyLogo.png" alt="Aoneo Logo" class="logo" href="https://aoneo.github.io">
+                  <ul class="navigation">
+                     <li><a href="/index.html" class="js-home-btn"> Home </a></li>
+                     <li><a href="#" class="js-portfolio-btn"> Portfolio </a></li>
+                     <li><a href="/shop/" class="js-shop-btn"> Shop </a></li>
+                     <li><a href="#" class="js-dev-btn"> Dev </a></li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+		
+        <h1 class="subtitle"> Design Shop </h1>
 		
 		
-		
-		
-		
-		
-		
+		<section class="store">
+            <div class="cardRow">
+                <div class="card">
+                    <img src="/Images/chameleon.png" class="image">
+                    <p class="cardtitle"> Animal Sticker Pack </p>
+                    <p class="cardtext"> Hand-made, vibrant animal stickers for print! </p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="payButton">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="RV9NG9KH3TRLY">
+                    <input type="image" src="https://aoneo.github.io/Images/buy.svg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </div>
+            </div>
+        
+        
+        
+        </section>
 		
 		
 		
@@ -111,12 +138,20 @@
 		
 		
 		
-		<!-- For jQuery \/ -->
+		<!-- For jQuery \/ 
 	   <script src="jquery.min.js"></script>
 		<!-- For jQuery ^^^-->
 		
 		
-		
+		<script>
+        
+            function displayWH() {
+                var text = window.screen.width + ' / ' window.screen.height;
+                document.getElementById('wh').innerHTML = text;
+            }
+            setInterval(displayWH, 100)
+            
+        </script>
 		
 <!-- Till here ======================================================================== -->
    	</body>

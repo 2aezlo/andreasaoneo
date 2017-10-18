@@ -5,7 +5,7 @@
       box-sizing: border-box;
 }
 *::selection {
-    background-color: rgba(129, 102, 171, 0.6);
+    background-color: rgba(226, 57, 141, 0.88);
 }
 /* ================================================================================== */
 /* =================================== MEDIA QUERIES ================================ */
@@ -157,6 +157,23 @@ linearGradient(rgba(94, 107, 255, 0.7), rgba(21, 6, 135, 0.7));
         background-clip: text;
     }
 }
+@-webkit-keyframes radiusIn {
+    from {
+        border-radius: 90%;
+    }
+    to {
+        border-radius: 0.5%;
+    }
+}
+@keyframes radiusIn {
+    from {
+        border-radius: 90%;
+    }
+    to {
+        border-radius: 0.5%;
+    }
+}
+
 /* ================================================================================== */
 /* ================================================================================== */
 /* ================================================================================== */
@@ -183,8 +200,8 @@ header {
 
 /*The logo in the navigation */
 .logo {
-     height: 10vh;
-     width: auto;
+     height: 9.9vh;
+     width: 9.9vh;
      float: left;
 }
 
@@ -256,4 +273,42 @@ header {
     width: 100%;
     animation: fadeUp 3s ease-out;
     /*animation: colorFadeIn 3s ease-out 3s;*/
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 500%;
+    font-weight: 300;
+    margin: 2vh auto;
+}
+
+/* The shop cards */
+.card {
+    width: calc((100vw / 3) - 12vw);
+    height: calc(((100vw / 3) - 12vw) + 200px);
+    border-radius: 0.5%;
+    animation: radiusIn 0.5s ease 0.1s;
+    margin: 4vw;
+    display: inline-block;
+    box-shadow: 0 1px 5px rgba(40, 44, 40, 0.85);
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+.cardRow {
+    margin: 5vh auto;
+}
+.card:hover {
+    box-shadow: 0 5px 20px rgba(40, 44, 40, 0.7);
+}
+.card .image {
+    width: calc((100vw / 3) - 12vw);
+    animation: radiusIn 0.5s ease 0.1s;
+}
+.card .cardtitle {
+    font-size: 150%;
+    margin: calc((1vw + 1vh) / 2);
+}
+.card .cardtext {
+    font-size: 80%;
+    margin: calc((0.5vw + 0.5vh) / 2);
 }
